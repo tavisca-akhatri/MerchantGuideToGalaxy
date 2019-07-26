@@ -1,27 +1,28 @@
 public class Parser2
 {
-    public String[] parse(String query)
+    public String[] sentenceparse(String query)
     {
         String querysplit[] = query.split("is ");
-        String split1[] = querysplit[0].split(" ");
-        String split2[] = querysplit[1].split(" ");
-        String[] output = new String[]{split1[0],split1[1],split1[2],split2[0]};
+        String words[] = querysplit[0].split(" ");
+        String credits[] = querysplit[1].split(" ");
+
+        String[] output = new String[]{words[0],words[1],words[2],credits[0]};
 
         return output;
     }
 
-    public String[] parse1(String query)
+    public String[] questionparse(String query)
     {
-        String queryonsplit[] ={};
-        String queryonsplit1[] ={};
+        String words[] ={};
+        String credits[] ={};
         String output[] = new String[]{};
         if(query.contains("how much"))
         {
             if(query.contains("is"))
             {
-                queryonsplit = query.split("is ");
-                queryonsplit1 = queryonsplit[1].split(" ");
-                output = new String[]{queryonsplit1[0],queryonsplit1[1],queryonsplit1[2],queryonsplit1[3]};
+                words = query.split("is ");
+                credits = words[1].split(" ");
+                output = new String[]{credits[0],credits[1],credits[2],credits[3]};
                 return output;
             }
             else
@@ -33,9 +34,9 @@ public class Parser2
         }
         else if(query.contains("how many"))
         {
-            queryonsplit = query.split("is ");
-            queryonsplit1 = queryonsplit[1].split(" ");
-            output = new String[]{queryonsplit1[0],queryonsplit1[1],queryonsplit1[2]};
+            words = query.split("is ");
+            credits = words[1].split(" ");
+            output = new String[]{credits[0],credits[1],credits[2]};
             return output;
         }
         return null;

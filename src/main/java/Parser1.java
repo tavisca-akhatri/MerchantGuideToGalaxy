@@ -1,7 +1,7 @@
 public class Parser1
 {
 
-    public String[] parse(String input)
+    public String[] wordparse(String input)
     {
           WordToRoman roman = new WordToRoman();
           String[] output = input.split(" ");
