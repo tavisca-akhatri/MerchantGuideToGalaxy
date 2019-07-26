@@ -1,4 +1,4 @@
-public class Parser2
+public class sentenceparser
 {
     public String[] sentenceParser(String query)
     {

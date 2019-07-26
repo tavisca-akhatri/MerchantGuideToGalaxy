@@ -2,10 +2,10 @@ import java.util.HashMap;
 
 public class WordToRoman
 {
-    public static HashMap<String,String> map = new HashMap<>();
+    public HashMap<String,String> map = new HashMap<>();
     public void StoreInHashMap(String[] input)
     {
-        map.put(input[0],input[1]);
+        this.map.put(input[0],input[1]);
     }
     public String getRoman(String input)
     {
@@ -13,9 +13,10 @@ public class WordToRoman
         String roman ="";
         for(String s : output)
         {
-            roman+=map.get(s);
+          //System.out.print(s);
+            roman+=this.map.get(s);
         }
-
+        System.out.println(roman);
         return roman;
     }
 }

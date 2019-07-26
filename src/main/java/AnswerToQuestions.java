@@ -7,11 +7,10 @@ public class AnswerToQuestions
     {
         map.put(entity,value);
     }
-    public double getAnswer(String s)
+    public double getAnswer(String s,WordToRoman romanNumber)
     {
         String[] output = s.split("is ");
         String result[] = output[1].split(" ");
-        WordToRoman w = new WordToRoman();
         RomanToNumber r = new RomanToNumber();
         String roman ="";
         double answer = 0;
@@ -19,7 +18,7 @@ public class AnswerToQuestions
         {
             for(int i = 0 ; i < result.length-1 ; i++)
             {
-                roman += w.getRoman(result[i]);
+                roman += romanNumber.getRoman(result[i]);
             }
             answer = r.getArithmeticNumber(roman);
         }
@@ -28,7 +27,7 @@ public class AnswerToQuestions
             double x = map.get(result[result.length-2]);
             for(int i = 0 ; i < result.length-2 ; i++)
             {
-                roman += w.getRoman(result[i]);
+                roman += romanNumber.getRoman(result[i]);
             }
             double y = r.getArithmeticNumber(roman);
             answer = x*y;

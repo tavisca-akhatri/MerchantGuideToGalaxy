@@ -24,6 +24,8 @@ public class RomanToNumber
         else {
             for(int i = 0 ; i < input.length()-1 ; i++) //II
             {
+//                System.out.println(input);
+//                System.out.println(map.get(input.charAt(i)));
                 if(map.get(input.charAt(i)) < map.get(input.charAt(i+1)))
                 {
                     number -= map.get(input.charAt(i));

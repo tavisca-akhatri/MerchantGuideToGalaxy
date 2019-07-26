@@ -1,8 +1,7 @@
-public class Parser1
+public class wordparser
 {
-    public String[] wordParser(String input)
+    public String[] wordParser(String input, WordToRoman roman)
     {
-          WordToRoman roman = new WordToRoman();
           String[] output = input.split(" ");
           String[] words = new String[]{output[0],output[2]};
           roman.StoreInHashMap(words);
