@@ -7,7 +7,6 @@ public class WordToRoman
     {
         map.put(input[0],input[1]);
     }
-
     public String getRoman(String input)
     {
         String[] output = input.split(" ");
@@ -19,6 +18,4 @@ public class WordToRoman
 
         return roman;
     }
-
-
 }

@@ -1,6 +1,6 @@
 public class Parser2
 {
-    public String[] sentenceparse(String query)
+    public String[] sentenceParser(String query)
     {
         String querysplit[] = query.split("is ");
         String words[] = querysplit[0].split(" ");
@@ -11,7 +11,7 @@ public class Parser2
         return output;
     }
 
-    public String[] questionparse(String query)
+    public String[] questionParser(String query)
     {
         String words[] ={};
         String credits[] ={};
