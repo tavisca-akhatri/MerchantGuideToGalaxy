@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class WordToRoman
 {
-    public HashMap<String,String> map = new HashMap<>();
+    private HashMap<String,String> map = new HashMap<>();
     public void StoreInHashMap(String[] input)
     {
         this.map.put(input[0],input[1]);
@@ -16,7 +16,7 @@ public class WordToRoman
           //System.out.print(s);
             roman+=this.map.get(s);
         }
-        System.out.println(roman);
+       //System.out.println(roman);
         return roman;
     }
 }

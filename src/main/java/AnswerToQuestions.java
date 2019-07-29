@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class AnswerToQuestions
 {
-    static public HashMap<String,Double> map = new HashMap<>();
+    static HashMap<String,Double> map = new HashMap<>();
     public void StoreInMap(String entity, double value)
     {
         map.put(entity,value);

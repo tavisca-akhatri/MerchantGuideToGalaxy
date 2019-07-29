@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class RomanToNumber
 {
-    public static HashMap<Character,Integer> map = new HashMap<>(){
+    private static HashMap<Character,Integer> map = new HashMap<>(){
         {
             put('I', 1);
             put('V', 5);
