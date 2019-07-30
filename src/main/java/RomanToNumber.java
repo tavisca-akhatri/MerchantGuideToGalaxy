@@ -2,8 +2,7 @@ import java.util.HashMap;
 
 public class RomanToNumber
 {
-
-    public static HashMap<Character,Integer> map = new HashMap<>(){
+    private static HashMap<Character,Integer> map = new HashMap<>(){
         {
             put('I', 1);
             put('V', 5);
@@ -14,8 +13,6 @@ public class RomanToNumber
             put('M',1000);
         }
     };
-
-
     public double getArithmeticNumber(String input)
     {
         double number = 0;
@@ -27,6 +24,8 @@ public class RomanToNumber
         else {
             for(int i = 0 ; i < input.length()-1 ; i++) //II
             {
+//                System.out.println(input);
+//                System.out.println(map.get(input.charAt(i)));
                 if(map.get(input.charAt(i)) < map.get(input.charAt(i+1)))
                 {
                     number -= map.get(input.charAt(i));
